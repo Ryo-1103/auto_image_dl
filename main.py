@@ -5,19 +5,20 @@ from urllib import error, request
 
 import tweepy
 
+import settings
+
 # 画像の保存先
 IMG_DIR = "image/"
 
 # 環境変数
-CONSUMER_KEY = os.environ.get("CONSUMER_KEY")
-CONSUMER_SECRET = os.environ.get("CONSUMER_SECRET")
-ACCESS_TOKEN_KEY = os.environ.get("ACCESS_TOKEN_KEY")
-ACCESS_TOKEN_SECRET = os.environ.get("ACCESS?TOKEN_SECRET")
-
-# キーワード
-search_key = "アウラ"
+CONSUMER_KEY = os.environ.get(settings.KEY)
+CONSUMER_SECRET = os.environ.get(settings.SECRET)
+ACCESS_TOKEN_KEY = os.environ.get(settings.ACCESS_KEY)
+ACCESS_TOKEN_SECRET = os.environ.get(settings.ACCESS_TOKEN)
 
 # 検索条件
+# キーワード
+search_key =input('保存したい画像の用語を入力してください')
 # 読み込むページ数
 search_page = 50
 # 1ページあたりのツイート数
